@@ -1,0 +1,12 @@
+# Never commit real credentials or local DB
+lib/config.php
+storage/*.db
+storage/*.db-wal
+storage/*.db-shm
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,11 @@
+# Block direct access to everything except index.php and static assets.
+Options -Indexes
+
+<FilesMatch "^(?!index\.php$).*\.php$">
+    Require all denied
+</FilesMatch>
+
+# Serve uploads with correct Content-Type
+<FilesMatch "\.(jpg|jpeg|png|gif|webp)$">
+    Header set X-Content-Type-Options "nosniff"
+</FilesMatch>
